@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/liuweiyibai/merge-images/compare/v1.0.0...v1.0.1) (2022-03-30)
+
+
+### Bug Fixes
+
+* test ci ([ef9772a](https://github.com/liuweiyibai/merge-images/commit/ef9772a1a4217750994c88259e72466783df13ae))
+
 # 1.0.0 (2022-03-30)
 
 
