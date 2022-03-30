@@ -45,8 +45,7 @@
     "build:lib": "rollup -c",
     "dev": "rollup -c -w",
     "finish": "npm run lint && npm run types",
-    "serve": "serve",
-    "release": "semantic-release"
+    "serve": "serve"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
