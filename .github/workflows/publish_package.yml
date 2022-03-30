@@ -19,7 +19,7 @@ jobs:
           always-auth: true
           node-version: 12
           registry-url: "https://npm.pkg.github.com"
-          scope: "@liuweiyibai"
+          # scope: "@liuweiyibai"
 
       - name: Install dependencies
         run: npm i
