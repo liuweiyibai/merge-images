@@ -11,6 +11,8 @@ yarn add merge-images
 
 ## 🔨 示例
 
+[在线demo](https://liuweiyibai.github.io/merge-images/demo/)
+
 ```js
 import MergeImages from 'merge-images'
 MergeImages(urls,direction,width,height)
