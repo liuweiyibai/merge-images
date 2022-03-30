@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>拼接图片</title>
+  <script src="../dist/index.js"></script>
+</head>
+
+<body>
+  <button id="btn">水平拼接图片</button>
+  <button id="btn2">竖直拼接图片</button>
+</body>
+<script>
+  // 新窗口打开图片
+  function openImagesInNewWin(str) {
+    const img = new Image();
+    img.src = str;
+    const newWin = window.open('', '_blank');
+    newWin?.document.write(img.outerHTML);
+    newWin?.document.close();
+  }
+  window.onload = function () {
+    document.querySelector('#btn').addEventListener('click', async () => {
+      const url = await MergeImages.mergeImages([
+        'https://img0.baidu.com/it/u=2064213898,2801034448&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500', 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F911%2F111G5133543%2F15111G33543-1.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651200638&t=87f778537f93c90d6cd747049e90a330', 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F911%2F0R415123342%2F150R4123342-6-1200.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651200638&t=f31c1e1d42a4455d9f540381241555ae'
+      ])
+      openImagesInNewWin(url)
+    })
+    document.querySelector('#btn2').addEventListener('click', async () => {
+      const url = await MergeImages.mergeImages([
+        'https://img0.baidu.com/it/u=2064213898,2801034448&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500', 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F911%2F111G5133543%2F15111G33543-1.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651200638&t=87f778537f93c90d6cd747049e90a330', 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F911%2F0R415123342%2F150R4123342-6-1200.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1651200638&t=f31c1e1d42a4455d9f540381241555ae'
+      ], 'vertical')
+      openImagesInNewWin(url)
+    })
+  }
+
+</script>
+
+</html>
