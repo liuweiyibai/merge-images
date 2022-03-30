@@ -17,7 +17,3 @@ yarn add merge-images
 import MergeImages from 'merge-images'
 MergeImages(urls,direction,width,height)
 ```
-
-## github ci
-
-测试githubci构建流程
